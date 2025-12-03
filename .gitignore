@@ -1,0 +1,30 @@
+# Binaries
+/bin/
+/cmd/**/bin/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go build cache
+*.test
+*.out
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Vendor
+vendor/
+
+# Coverage
+coverage.out
+coverage.html
