@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 
+	"github.com/behrang-nebro/cliGoProjectStructure/internals/gitrepo"
 	"github.com/behrang-nebro/cliGoProjectStructure/internals/gomod"
 	"github.com/behrang-nebro/cliGoProjectStructure/internals/makedirectory"
 )
@@ -65,4 +66,5 @@ func main() {
 	}
 
 	gomod.ExecGoMod(*githubUsername, *projectName)
+	gitrepo.ExecGit(*githubUsername, *projectName)
 }

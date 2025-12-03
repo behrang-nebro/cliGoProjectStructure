@@ -23,5 +23,6 @@ func ExecGoMod(userName, projectName string) {
 	}
 
 	fmt.Printf("go mod init was executed succesfuly\n")
+	fmt.Printf("###################################\n")
 
 }
