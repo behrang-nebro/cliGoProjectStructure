@@ -4,13 +4,15 @@ import (
 	"flag"
 	"fmt"
 
-	makedirectory "github.com/behrang-nebro/cliGoProjectStructure/internals/makeDirectory"
+	"github.com/behrang-nebro/cliGoProjectStructure/internals/gomod"
+	"github.com/behrang-nebro/cliGoProjectStructure/internals/makedirectory"
 )
 
 func main() {
 	fmt.Println("hello world")
 
 	projectName := flag.String("projectName", "newProject", "the name of the project to make the structure for")
+	githubUsername := flag.String("githubUsername", "notSpecified", "the name of the github username")
 
 	internalsBool := flag.Bool("intenal", true, "should I make a internals directory?")
 	pkgBool := flag.Bool("pkg", true, "should I make a pkg directory?")
@@ -62,4 +64,5 @@ func main() {
 		makedirectory.MkSubDir(*projectName, "web")
 	}
 
+	gomod.ExecGoMod(*githubUsername, *projectName)
 }
